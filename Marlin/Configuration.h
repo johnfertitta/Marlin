@@ -475,10 +475,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-<<<<<<< HEAD
 #define BED_MAXTEMP      125
-=======
-#define BED_MAXTEMP      150
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -490,7 +487,6 @@
 #define HOTEND_OVERSHOOT 15   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT
->>>>>>> 2.0.x
 
 //===========================================================================
 //============================= PID Settings ================================
@@ -746,25 +742,15 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-<<<<<<< HEAD
 #define X_DRIVER_TYPE  TMC2209
 #define Y_DRIVER_TYPE  TMC2209
 #define Z_DRIVER_TYPE  TMC2209
-=======
-#define X_DRIVER_TYPE  A4988
-#define Y_DRIVER_TYPE  A4988
-#define Z_DRIVER_TYPE  A4988
->>>>>>> 2.0.x
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
-<<<<<<< HEAD
 #define E0_DRIVER_TYPE TMC2209
-=======
-#define E0_DRIVER_TYPE A4988
->>>>>>> 2.0.x
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -819,11 +805,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-<<<<<<< HEAD
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 415 }
-=======
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
->>>>>>> 2.0.x
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1072,7 +1054,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -26.5, 12.5, -0.616 }
+#define NOZZLE_TO_PROBE_OFFSET { -26.5, 12.5, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1248,15 +1230,9 @@
 
 // @section machine
 
-<<<<<<< HEAD
 // The size of the print bed
 #define X_BED_SIZE 235
 #define Y_BED_SIZE 235
-=======
-// The size of the printable area
-#define X_BED_SIZE 200
-#define Y_BED_SIZE 200
->>>>>>> 2.0.x
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -10
@@ -1421,10 +1397,7 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-<<<<<<< HEAD
 #define RESTORE_LEVELING_AFTER_G28
-=======
-//#define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
 /**
@@ -1435,7 +1408,6 @@
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     50
 #endif
->>>>>>> 2.0.x
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1622,12 +1594,7 @@
 #endif
 
 // Homing speeds (mm/min)
-<<<<<<< HEAD
-#define HOMING_FEEDRATE_XY (20*60)
-#define HOMING_FEEDRATE_Z  (4*60)
-=======
 #define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
->>>>>>> 2.0.x
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1738,26 +1705,16 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-<<<<<<< HEAD
-#define PREHEAT_1_TEMP_HOTEND 185
-#define PREHEAT_1_TEMP_BED     45
-#define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
-=======
 #define PREHEAT_1_TEMP_HOTEND 180
 #define PREHEAT_1_TEMP_BED     70
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
->>>>>>> 2.0.x
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240
 #define PREHEAT_2_TEMP_BED    110
-<<<<<<< HEAD
-#define PREHEAT_2_FAN_SPEED   255 // Value from 0 to 255
-=======
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
->>>>>>> 2.0.x
 
 /**
  * Nozzle Park
